@@ -5,10 +5,10 @@
 Group Project Description
 
 ###Heroku Link:
-https://gp276.herokuapp.com/test
+https://profimon.herokuapp.com/test 
  
 ###GIT LINK:
- https://github.com/justachoob/groupproject276
+https://github.com/justachoob/Profimon 
  
 ###Proposal writeup:
  
