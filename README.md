@@ -24,13 +24,13 @@ Our web app will be a game that provides entertainment value to users. It will h
 
 # Epics and Stories of Our Application
 
-# --User Creation/Login--
+## User Creation/Login
 One epic of our application would be creating a new user in Profimon. A player needs to create an account before they can start playing Profimon. One story within the epic of user creation is the process of signing up, in which the user provides their username, password and email address. The user then submits this information by clicking the “Submit” button. A verification email will be sent to the email address provided, and once this account has been verified, the user then needs to login. The player will then have the option to set up a public profile and choose which faculty they belong to (another story). If the user decides to end their playing session at any moment, they will have the ability to logout without losing their progress by hitting the “Log Out” button.
 
-# --Engaging in Battles--
+## Engaging in Battles
 Battling Profimons and earning badges is another epic of our application. To battle a Profimon, a player must first have an account (see User Creation/Login for more details). After login is complete, one story is that a player can choose a particular course and browse through a menu for the current course offerings. The user can then select to battle a Profimon in a particular course to earn a grade for the course. The player will use skills to battle the Profimon (another story), and the Profimon can counter with their own set of skills. At the end of each battle, a player will be awarded a grade for that course. One other story associated with the battles would be the ability to earn badges, which are awarded for achieving high grades for a group of courses in the same faculty.
 
-# --Administration and Maintenance--
+## Administration and Maintenance
 As an administrator, one epic would be the ability to view and maintain the databases within the Profimon game. One story associated with this epic would be the ability to view the statistics associated with each Profimon and course as well as the library of available skills. Admin users can also create their own Profimons and set the statistics and list of skills for these Profimons. Another story would be the ability to add to the list of available skills. Admin users will have access to all the features that regular users have access to.
 
 # APIs Used
