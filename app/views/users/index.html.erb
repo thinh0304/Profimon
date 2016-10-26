@@ -1,3 +1,9 @@
+<!-- Test to see if users were added to database -->
+
+<% if flash[:notice] %>
+    <div class="notice"><%= flash[:notice] %></div>
+  <% end %>
+
 <% @users.each do |u| %>
 	<p> <%= u.name %> </p> <br>
 
