@@ -12,7 +12,7 @@ class UserTest < ActiveSupport::TestCase
 
   test"valid email" do #Tests for correct email format
   	user = User.new
-  	user.name = "Man vir"
+  	user.name = "Manvir"
   	user.email = "notanemail"
   	user.password = "test"
   	assert_not user.valid?
