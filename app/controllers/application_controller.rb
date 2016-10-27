@@ -3,6 +3,7 @@ class ApplicationController < ActionController::Base
 
   private 
 
+  #Helper to confirm if user is logged in, redirects to login if not
   def confirm_logged_in
   	unless session[:user_id]
   		flash[:notice] = "Please Log in."

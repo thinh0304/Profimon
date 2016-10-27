@@ -1,9 +1,10 @@
 class SessionsController < ApplicationController
   
-
+  #Empty action with html for login
   def new
   end
 
+  #Login action 
   def create
   	if params[:session][:name].present? && params[:session][:password].present?
   		user = User.find_by(name: params[:session][:name])
@@ -22,7 +23,7 @@ class SessionsController < ApplicationController
     end
   end
 
-
+  #Logout
   def destroy
     session[:user_id] = nil
     redirect_to login_path

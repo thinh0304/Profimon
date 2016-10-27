@@ -1,7 +1,11 @@
 class UsersController < ApplicationController
 
+  #Action to restrict access if user is not logged in
+  #Must be added to every controller if you want to restrict access
+  before_action :confirm_logged_in, :except => [:new , :create] 
 
-  before_action :confirm_logged_in, :except => [:new , :create]
+
+
   def index 
   	@users = User.all
   end
