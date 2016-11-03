@@ -16,7 +16,15 @@ class SessionsController < ApplicationController
   	if authorized_user
       session[:user_id] = authorized_user.id
       flash[:notice] = "You are now logged in."
-      redirect_to user_path(:id => authorized_user.id)
+
+      if authorized_user.admin
+        session[:admin] = true
+        redirect_to user_path(:id => authorized_user.id)
+
+      else
+        session[:admin]= false
+        redirect_to user_path(:id => authorized_user.id)
+      end
     else
       flash.now[:notice] = "Invalid username/password combination."
       render('new')
@@ -26,6 +34,7 @@ class SessionsController < ApplicationController
   #Logout
   def destroy
     session[:user_id] = nil
+    session[:admin] = nil
     flash[:notice] = "You are now logged out."
     redirect_to login_path
   end

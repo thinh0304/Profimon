@@ -22,7 +22,12 @@ class UsersController < ApplicationController
   		flash[:notice] = "Signup successful"
   		params[:user] = {:id=> @user.id}
       session[:user_id] = @user.id
-  		redirect_to(users_path)
+      if @user.admin
+        session[:admin] = true;
+        redirect_to controller: 'admin', action:'show', id: @user.id
+      else
+  		  redirect_to(users_path)
+      end
   	else 
   		flash[:notice] = "Error with your signup"
   		redirect_to(new_user_path)
@@ -36,7 +41,7 @@ class UsersController < ApplicationController
    private
 
   def user_params
-    params.require(:user).permit(:name, :email, :password, :password_confirmation, :id)
+    params.require(:user).permit(:name, :email, :password, :password_confirmation, :id, :admin)
   end 
 
 end

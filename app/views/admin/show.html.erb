@@ -1,12 +1,10 @@
 <div class="main">
-<% if flash[:notice] %>
-		<div class="notice"><%= flash[:notice] %></div>
-<% end %>
+
 <p> <%= @user.name %> </p>
 <p> <%= @user.email %> </p> <br>
-
-<%= link_to 'Admin' , "/admin/#{@user.id}" %>
+<p> <%= @user.admin %> </p> 
 
 <%= link_to 'Logout' , logout_path , method: :delete %>
 
+<%= session.inspect %>
 </div>

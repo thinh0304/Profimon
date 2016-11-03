@@ -36,11 +36,11 @@
   </div>
 
 
-    <%= radio_button_tag(:admin, false ) %>
-    <%= label_tag(:admin, "Regular") %>
+    <%= f.radio_button :admin, false %>
+    <%= f.label :admin, "Regular" %>
 
-    <%= radio_button_tag(:admin, true) %>
-    <%= label_tag(:admin, "Admin") %>
+    <%= f.radio_button :admin, true %>
+    <%= f.label :admin, "Admin" %>
   <br>
 
   <div class="actions">
