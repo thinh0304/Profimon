@@ -11,6 +11,7 @@ class ApplicationController < ActionController::Base
   	end
   end
 
+  #Helper to confirm is user is an admin
   def confirm_admin
   	unless session[:admin]
   		flash[:notice] = "You are not an admin."
