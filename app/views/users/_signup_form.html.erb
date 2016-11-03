@@ -5,7 +5,7 @@
 
   <div id="error_explanation">
     <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
- 
+
     <ul>
     <% user.errors.full_messages.each do |msg| %>
       <li><%= msg %></li>
@@ -16,30 +16,35 @@
 
 <% end %>
   <div class="field">
-    <%= f.label :name %>
-    <%= f.text_field :name %>
+    <%= f.label :name, 'Username:' %><br>
+    <%= f.text_field :name, class: 'input_field_center' %>
   </div>
 
   <div class="field">
-    <%= f.label :email %>
-    <%= f.text_field :email %>
+    <%= f.label :email, 'Email:' %><br>
+    <%= f.text_field :email, class: 'input_field_center' %>
   </div>
 
   <div class="field">
-    <%= f.label :password%>
-    <%= f.password_field :password %>
+    <%= f.label :password, 'Password:' %><br>
+    <%= f.password_field :password, class: 'input_field_center' %>
   </div>
 
   <div class="field">
-    <%= f.label :password_confirmation%>
-    <%= f.password_field :password_confirmation %>
+    <%= f.label :password_confirmation, 'Confirm Password:'%><br>
+    <%= f.password_field :password_confirmation, class: 'input_field_center' %>
   </div>
 
 
+    <%= radio_button_tag(:admin, false ) %>
+    <%= label_tag(:admin, "Regular") %>
+
+    <%= radio_button_tag(:admin, true) %>
+    <%= label_tag(:admin, "Admin") %>
+  <br>
 
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Create User", class: "form_button" %>
   </div>
 
-  <%= debug(params) if Rails.env.development? %>
 <% end %>

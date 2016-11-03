@@ -13,3 +13,63 @@
  *= require_tree .
  *= require_self
  */
+
+@import url(//fonts.googleapis.com/css?family=Arvo);
+
+body {
+   background-color: #440000;
+   font-family: 'Arvo', Verdana, sans-serif;
+}
+
+div.main {
+  width: 85%;
+  padding: 30px;
+  border-radius: 15px;
+  background-color: #EEF2F6;
+  margin: 40px auto;
+}
+
+h1 {
+  font-weight: bolder;
+  color: #A23;
+  text-align: center;
+  font-size: 3em;
+}
+
+h4.subtitle {
+  margin-top: 0;
+  margin-bottom: 40px;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.form_button {
+  font-family: 'Arvo';
+  font-size: 1em;
+  background-color: #A23;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  border: 0;
+}
+
+.form_button:hover {
+  cursor: pointer;
+}
+
+.input_field {
+  font-family: 'Arvo';
+  font-size: 1em;
+}
+
+.input_field_center {
+  font-family: 'Arvo';
+  font-size: 1em;
+  width: 300px;
+}
+
+.notice {
+  text-align: center;
+  margin-top: 20px;
+  color: red;
+}
