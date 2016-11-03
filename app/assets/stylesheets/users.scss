@@ -1,3 +1,38 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+label.inline_label {
+  margin-left: 20px;
+}
+
+form {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 1.2em;
+}
+
+.form_button {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+p.sign_up {
+  text-align: center;
+  font-size: 1.2em;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.form_link {
+  background-color: #A23;
+  color: white;
+  padding: 6px;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-left: 20px;
+}
+
+.field {
+  margin-top: 20px;
+}
