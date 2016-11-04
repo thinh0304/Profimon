@@ -1,0 +1,42 @@
+<div class="main">
+<% provide(:title, "Edit user") %>
+<h1>Update your profile</h1>
+<%= form_for (@user) do |f| %>
+
+
+
+
+  <div class="field">
+    <%= f.label :name, 'Username:' %><br>
+    <%= f.text_field :name, class: 'input_field_center' %>
+  </div>
+
+  <div class="field">
+    <%= f.label :email, 'Email:' %><br>
+    <%= f.text_field :email, class: 'input_field_center' %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password, 'New Password:' %><br>
+    <%= f.password_field :password, class: 'input_field_center' %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password_confirmation, 'New Password Confirmation:'%><br>
+    <%= f.password_field :password_confirmation, class: 'input_field_center' %>
+  </div>
+  <div class="field">
+    <%= f.label :faculty, 'Falcuty:'%><br>
+    <%= f.text_field :faculty, class: 'input_field_center' %>
+  </div>
+
+
+
+  <br>
+
+  <div class="actions">
+    <%= f.submit "Saves Changes", class: "form_button" %>
+  </div>
+
+<% end %>
+</div>

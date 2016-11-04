@@ -2,11 +2,17 @@
 <% if flash[:notice] %>
 		<div class="notice"><%= flash[:notice] %></div>
 <% end %>
+
 <p> <%= @user.name %> </p>
-<p> <%= @user.email %> </p> <br>
+<p> Current GPA: <%=@user.GPA%> </p>
+<p> Number of Courses Taken: <%=@user.number_courses_taken%> </p>
+<p> Courses Taken: <%=@user.course_taken%> </p>
+
+
+<br>
+<%= link_to 'Edit Profile', edit_user_path%> <br>
 
 <%= link_to 'Admin' , "/admin/#{@user.id}" %>
-
 <%= link_to 'Logout' , logout_path , method: :delete %>
 
 </div>
